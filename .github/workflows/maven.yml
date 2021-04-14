@@ -15,4 +15,4 @@ jobs:
         distribution: 'adopt' # See 'Supported distributions' for available options
         java-version: '11'
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: sudo apt-get install -yq libgfortran3 && mvn -B package --file pom.xml
